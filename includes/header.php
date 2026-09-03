@@ -14,7 +14,7 @@ $payments_base = $GLOBALS['payments_base'] ?? '/olp/';
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link rel="stylesheet" href="<?= $payments_base ?>assets/style.css?v=9">
+<link rel="stylesheet" href="<?= $payments_base ?>assets/style.css?v=13">
 </head>
 <body>
 <header class="pay-header">

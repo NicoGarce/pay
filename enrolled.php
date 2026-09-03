@@ -51,9 +51,9 @@ if(isset($_POST["btnsubmit"])){
 require_once __DIR__ . '/includes/header.php';
 ?>
 <div style="max-width:780px;margin:0 auto">
-  <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
-    <a href="<?= $payments_base ?>" class="btn" style="background:#fff;border:1px solid var(--line)"><i class="fa-solid fa-arrow-left"></i> Back</a>
-    <span style="color:var(--muted);font-weight:700"><i class="fa-solid fa-id-card"></i> Enrolled Students</span>
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+    <a href="<?= $payments_base ?>" class="btn" style="background:#fff;border:1px solid var(--line); padding:7px 12px; font-size:12px">Back</a>
+    <span style="color:var(--muted);font-weight:600; font-size:12px">Enrolled Students</span>
   </div>
 
   <div class="form-card">

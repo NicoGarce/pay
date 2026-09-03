@@ -122,10 +122,10 @@ if ($type==='new') {
 require_once __DIR__ . '/includes/header.php';
 ?>
 <div style="max-width:900px;margin:0 auto">
-  <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
-    <a href="<?= $payments_base ?><?= $type==='new'?'new-enrollee':($type==='enrolled'?'enrolled':'other') ?>" class="btn" style="background:#fff;border:1px solid var(--line)"><i class="fa-solid fa-arrow-left"></i> Back</a>
-    <span style="font-weight:800;color:var(--blue)"><i class="fa-solid fa-lock"></i> Secure Checkout</span>
-    <span style="margin-left:auto;font-size:12px;color:var(--muted)">DragonPay • Encrypted</span>
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+    <a href="<?= $payments_base ?><?= $type==='new'?'new-enrollee':($type==='enrolled'?'enrolled':'other') ?>" class="btn" style="background:#fff;border:1px solid var(--line); padding:7px 12px; font-size:12px">Back</a>
+    <span style="font-weight:600;color:var(--blue); font-size:12px">Secure Checkout</span>
+    <span style="margin-left:auto;font-size:11px;color:var(--muted)">DragonPay • Encrypted</span>
   </div>
 
   <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:18px" class="checkout-grid">
@@ -200,10 +200,6 @@ require_once __DIR__ . '/includes/header.php';
           <span style="background:#fff;color:var(--blue);padding:6px 8px;border-radius:999px;font-size:11px;font-weight:800">Over the Counter</span>
 
         </div>
-      </div>
-      <div class="section" style="margin:0">
-        <h4 style="margin:0 0 8px"><i class="fa-solid fa-circle-info" style="color:var(--blue)"></i> Need help?</h4>
-        <p style="color:var(--muted);font-size:13px">Contact UPHS Accounting: (02) 779-5310 • (049) 554-5150. Keep your Transaction ID for reference.</p>
       </div>
     </div>
   </div>

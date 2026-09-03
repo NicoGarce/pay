@@ -245,11 +245,20 @@ body.modal-open{overflow:hidden}
 .verify-meta span{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid #e2e8f0;background:#f8fafc;color:#334155}
 .verify-meta span i{color:var(--blue);font-size:11px}
 .verify-hint{font-size:13px;color:#64748b;line-height:1.5;background:#f8fafc;border:1px dashed #e2e8f0;border-radius:12px;padding:10px 12px}
-.verify-actions{display:flex;gap:10px;padding:14px 16px;background:#f8fafc;border-top:1px solid #eef2ff;flex-wrap:wrap}
-.verify-actions .btn{flex:1 1 140px;justify-content:center;padding:13px 16px;font-weight:800;border-radius:999px}
-.verify-actions .btn-primary{background:var(--blue);color:#fff;border:1px solid var(--blue);box-shadow:0 8px 18px rgba(28,77,161,.22)}
+@media(max-width:480px){
+  .verify-card-body{padding:12px !important; gap:8px !important}
+  .verify-avatar{width:36px !important; height:36px !important; font-size:12px !important}
+  .verify-name{font-size:15px !important}
+  .verify-sub{font-size:11px !important}
+  .verify-meta span{padding:5px 8px !important; font-size:11px !important}
+  .verify-hint{padding:8px 10px !important; font-size:12px !important}
+}
+.verify-actions{display:flex;gap:8px;padding:10px 12px;background:#f8fafc;border-top:1px solid #eef2ff;flex-wrap:wrap}
+.verify-actions .btn{flex:1 1 110px;justify-content:center;padding:10px 14px !important;font-size:13px !important;font-weight:800;border-radius:999px;min-height:36px !important;line-height:1.2}
+.verify-actions .btn-primary{background:var(--blue);color:#fff;border:1px solid var(--blue);box-shadow:0 4px 10px rgba(28,77,161,.15)}
 .verify-actions .btn-primary:hover{background:var(--blueDark)}
-@media(max-width:480px){.verify-actions{flex-direction:column}.verify-actions .btn{width:100%}}
+@media(max-width:480px){.verify-actions{flex-direction:row !important; flex-wrap:wrap; padding:8px !important; gap:6px !important}.verify-actions .btn{flex:1 1 0 !important; width:auto !important; padding:7px 10px !important; font-size:11.5px !important; min-height:30px !important}}
+@media(max-width:360px){.verify-actions{padding:6px !important}.verify-actions .btn{padding:6px 8px !important; font-size:11px !important; min-height:28px !important}}
 
 /* checkout specific */
 .pay-summary{background:linear-gradient(135deg,#0f2a6b,#2a64c8);color:#fff;border-radius:16px;padding:16px;display:grid;gap:10px}
