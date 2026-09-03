@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteBase /olp/
+
+# 1) External redirect: /olp/*.php -> /olp/* (clean) for GET only, to hide .php in address bar
+RewriteCond %{THE_REQUEST} \s/olp/(.+?)\.php[\s?] [NC]
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteRule ^(.+)\.php$ $1 [R=301,L,NE]
+
+# 2) Internal rewrite: clean URL -> .php if the php file exists
+#    Supports /new-enrollee, /enrolled, /other, /checkout, /admin/students, /admin/monitoring, /admin/login etc.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ $1.php [L]
+
+# 3) Allow directory index for /olp/admin/
+DirectoryIndex index.php

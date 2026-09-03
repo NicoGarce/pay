@@ -1,0 +1,49 @@
+# Windows
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Sensitive configs — never commit real credentials
+/app/config/database.php
+/includes/dbconnect.php
+/app/config/dragonpay.php
+.env
+*.env
+
+# Uploads & user data
+/uploads/
+/uploads/*
+/api/uploads/
+*.sql
+*.csv
+!*.example.sql
+!*.example.csv
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# Logs & temp
+*.log
+/logs/
+*.tmp
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backups
+*.bak
+*.backup
+*.dump
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
