@@ -1,12 +1,11 @@
 <?php
 // OLP Standalone Admin Login â€” independent from UPHSedu/auth
 if (session_status() === PHP_SESSION_NONE) session_start();
-require_once __DIR__ . '/../includes/dbconnect.php';
-require_once __DIR__ . '/../includes/auth.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $error = '';
 if (olp_isLoggedIn() && olp_isSuperAdmin()) {
-    $redir = $_GET['redirect'] ?? '/olp/admin/';
+    $redir = $_GET['redirect'] ?? $payments_base . 'admin/';
     header("Location: $redir"); exit;
 }
 
@@ -27,9 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // also mirror to generic session for compatibility
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_role'] = $user['role'];
-                $redir = $_GET['redirect'] ?? '/olp/admin/';
+                $redir = $_GET['redirect'] ?? $payments_base . 'admin/';
                 // prevent open redirect to external
-                if (strpos($redir, '//') !== false || strpos($redir, 'http') === 0) $redir = '/olp/admin/';
+                if (strpos($redir, '//') !== false || strpos($redir, 'http') === 0) $redir = $payments_base . 'admin/';
                 header("Location: $redir"); exit;
             }
         } else {
@@ -44,8 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Admin Login - UPHSL Payments</title>
-<link rel="icon" type="image/png" href="/olp/assets/UPHSJ_LOGO_2026Edition.png">
-<link rel="shortcut icon" type="image/png" href="/olp/assets/UPHSJ_LOGO_2026Edition.png">
+<link rel="icon" type="image/png" href="<?= $payments_base ?>assets/UPHSJ_LOGO_2026Edition.png">
+<link rel="shortcut icon" type="image/png" href="<?= $payments_base ?>assets/UPHSJ_LOGO_2026Edition.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Barlow+Semi+Condensed:wght@700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
@@ -70,7 +69,7 @@ a{color:var(--blue);font-weight:700;text-decoration:none}
 <body>
 <div class="card">
   <div class="head">
-    <img src="/olp/assets/UPHSJ_LOGO_2026Edition.png" alt="UPHSL">
+    <img src="<?= $payments_base ?>assets/UPHSJ_LOGO_2026Edition.png" alt="UPHSL">
     <h1>OLP Admin</h1>
     <p>Online Payment Portal — Standalone Admin</p>
   </div>
@@ -79,7 +78,7 @@ a{color:var(--blue);font-weight:700;text-decoration:none}
     <div class="field"><label>Username</label><input type="text" name="username" required autofocus placeholder="web-admin" value="<?= htmlspecialchars($_POST['username'] ?? '') ?>"></div>
     <div class="field"><label>Password</label><input type="password" name="password" required placeholder="••••••••"></div>
     <button type="submit" class="btn"><i class="fa-solid fa-right-to-bracket"></i> Sign In</button>
-    <div class="note">OLP users in <code>uphsledu_onlinepayment.users</code> (super_admin only).<br><a href="/olp/">Back to OLP Hub</a> • <a href="/uphsledu/auth/login">Main Site Login</a></div>
+    <div class="note">OLP users in <code>uphsledu_onlinepayment.users</code> (super_admin only).<br><a href="<?= $payments_base ?>">Back to OLP Hub</a> • <a href="/uphsledu/auth/login">Main Site Login</a></div>
   </form>
 </div>
 </body>

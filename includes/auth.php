@@ -70,7 +70,8 @@ function olp_getUserByUsername($username) {
 }
 function olp_requireAdmin() {
     if (!olp_isLoggedIn() || !olp_isSuperAdmin()) {
-        header('Location: /olp/admin/login?redirect=' . urlencode($_SERVER['REQUEST_URI'] ?? '/olp/admin/'));
+        $payments_base = $GLOBALS['payments_base'] ?? '/';
+        header('Location: ' . $payments_base . 'admin/login?redirect=' . urlencode($_SERVER['REQUEST_URI'] ?? $payments_base . 'admin/'));
         exit;
     }
 }

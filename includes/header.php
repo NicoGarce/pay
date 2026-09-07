@@ -1,7 +1,7 @@
 <?php
 // Payments Portal Header — standalone, only 3 featured payments in nav
 $current = basename($_SERVER['PHP_SELF'], '.php');
-$payments_base = $GLOBALS['payments_base'] ?? '/olp/';
+$payments_base = $GLOBALS['payments_base'] ?? '/';
 ?>
 <!DOCTYPE html>
 <html lang="en">
