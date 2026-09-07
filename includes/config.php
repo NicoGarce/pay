@@ -14,9 +14,15 @@ if (isset($con)) {
     ensureTmpStudentTablesExist($con);
 }
 
-// --- Base path for this standalone hub at /olp/ ---
+// --- Base path for this standalone hub ---
+// Detect environment: live server (pay.uphsl.edu.ph) uses root '/', local uses '/olp/'
 if (!isset($GLOBALS['payments_base'])) {
-    $GLOBALS['payments_base'] = '/olp/';
+    $host = $_SERVER['HTTP_HOST'] ?? '';
+    if (strpos($host, 'pay.uphsl.edu.ph') !== false) {
+        $GLOBALS['payments_base'] = '/';
+    } else {
+        $GLOBALS['payments_base'] = '/olp/';
+    }
 }
 $payments_base = $GLOBALS['payments_base'];
 
