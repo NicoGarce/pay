@@ -97,6 +97,11 @@ if (isset($_POST['submit'])) {
 
     if (empty($errors)) {
         $parameters['amount'] = number_format($parameters['amount'], 2, '.', '');
+        // Tag OLP origin in description so uphsl.edu.ph retback can proxy to pay.uphsl.edu.ph/retback
+        // (stripped for display in olp/retback.php). Also ensures DragonPay offline return can be routed.
+        if (strpos($parameters['description'], 'OLP') === false) {
+            $parameters['description'] .= ' | OLP';
+        }
         @mysqli_query($con, "INSERT INTO return_data (txnid) VALUES('".mysqli_real_escape_string($con,$parameters['txnid'])."')");
         $parameters['key'] = MERCHANT_PASSWORD;
         $digest_string = implode(':', $parameters);
