@@ -214,10 +214,10 @@ $payments_base = $GLOBALS['payments_base'] ?? '/';
 
 <div class="retback-wrap">
   <!-- breadcrumb -->
-  <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px" class="no-print">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap" class="no-print">
     <a href="<?= $payments_base ?>" class="btn" style="background:#fff;border:1px solid var(--line);padding:8px 14px;font-size:12px">← Back to Home</a>
     <a href="<?= $payments_base ?>instructions" class="btn" style="background:#fff;border:1px solid var(--line);padding:8px 14px;font-size:12px"><i class="fa-solid fa-circle-question"></i> How to Pay</a>
-    <span style="margin-left:auto;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)">DragonPay • Encrypted</span>
+    <span style="margin-left:auto;display:inline-flex;align-items:center"><img src="<?= $payments_base ?>assets/dragonpay-xendit-logo-removebg-preview.png" alt="DragonPay" class="dp-logo dp-logo--sm" style="height:20px"></span>
   </div>
 
   <div class="retback-hero">
@@ -227,6 +227,7 @@ $payments_base = $GLOBALS['payments_base'] ?? '/';
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
           <h1 class="retback-hero-title"><?= $statusLabel === 'Success' ? 'Payment Successful' : ($statusLabel==='Pending' ? 'Payment Pending' : ($statusLabel==='Failure' ? 'Payment Failed' : 'Payment '.$statusLabel)) ?></h1>
           <span class="retback-badge"><i class="fa-solid fa-shield-halved"></i> <?= htmlspecialchars($statusLabel) ?> • <?= htmlspecialchars($rawStatus ?: '—') ?></span>
+          <img src="<?= $payments_base ?>assets/dragonpay-xendit-logo-removebg-preview.png" alt="DragonPay" class="dp-logo" style="height:24px;margin-left:auto">
         </div>
         <div class="retback-hero-sub"><?= htmlspecialchars($statusInfo['desc']) ?> <?= $digestValid===false ? ' — '.htmlspecialchars($digestNote) : '' ?></div>
       </div>

@@ -49,7 +49,7 @@ require_once __DIR__ . '/includes/header.php';
       </div>
       <div class="step-row">
         <div class="step-text"><span class="step-num">5</span><span><strong>Pay via DragonPay</strong> — choose <strong>Online Banking, E-Wallets, or Over the Counter</strong>, then complete. Keep your Transaction ID.</span></div>
-        <div class="fig"><div style="display:flex; gap:6px; flex-wrap:wrap; justify-content:center"><span style="background:var(--blue); color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">Online Banking</span><span style="background:#10b981; color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">E-Wallets</span><span style="background:#f59e0b; color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">Over the Counter</span></div></div>
+        <div class="fig"><div style="display:grid;gap:8px;place-items:center"><img src="<?= $payments_base ?>assets/dragonpay-xendit-logo-removebg-preview.png" alt="DragonPay" class="dp-logo" style="height:26px"><div style="display:flex; gap:6px; flex-wrap:wrap; justify-content:center"><span style="background:var(--blue); color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">Online Banking</span><span style="background:#10b981; color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">E-Wallets</span><span style="background:#f59e0b; color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">Over the Counter</span></div></div></div>
         <div class="fig-caption">Fig. 5 — DragonPay options. You’ll be redirected to complete payment.</div>
       </div>
       <div class="step-row">
@@ -95,7 +95,7 @@ require_once __DIR__ . '/includes/header.php';
       </div>
       <div class="step-row">
         <div class="step-text"><span class="step-num" style="background:#ecfdf5;color:#065f46">5</span><span><strong>Pay via DragonPay</strong> — Online Banking / E-Wallets / Over the Counter.</span></div>
-        <div class="fig"><div style="display:flex; gap:6px; justify-content:center"><span style="background:var(--blue); color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">Online Banking</span><span style="background:#10b981; color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">E-Wallets</span><span style="background:#f59e0b; color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">Over the Counter</span></div></div>
+        <div class="fig"><div style="display:grid;gap:8px;place-items:center"><img src="<?= $payments_base ?>assets/dragonpay-xendit-logo-removebg-preview.png" alt="DragonPay" class="dp-logo" style="height:26px"><div style="display:flex; gap:6px; justify-content:center"><span style="background:var(--blue); color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">Online Banking</span><span style="background:#10b981; color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">E-Wallets</span><span style="background:#f59e0b; color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">Over the Counter</span></div></div></div>
         <div class="fig-caption">Fig. 5 — Same DragonPay options for all types.</div>
       </div>
       <div class="step-row">
@@ -130,7 +130,7 @@ require_once __DIR__ . '/includes/header.php';
       </div>
       <div class="step-row">
         <div class="step-text"><span class="step-num" style="background:#fffbeb;color:#92400e; border:1px solid #fde68a">3</span><span><strong>Pay via DragonPay</strong> — Online Banking / E-Wallets / Over the Counter.</span></div>
-        <div class="fig"><div style="display:flex; gap:6px; justify-content:center"><span style="background:var(--blue); color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">Online Banking</span><span style="background:#10b981; color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">E-Wallets</span><span style="background:#f59e0b; color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">Over the Counter</span></div></div>
+        <div class="fig"><div style="display:grid;gap:8px;place-items:center"><img src="<?= $payments_base ?>assets/dragonpay-xendit-logo-removebg-preview.png" alt="DragonPay" class="dp-logo" style="height:26px"><div style="display:flex; gap:6px; justify-content:center"><span style="background:var(--blue); color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">Online Banking</span><span style="background:#10b981; color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">E-Wallets</span><span style="background:#f59e0b; color:#fff; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:800">Over the Counter</span></div></div></div>
         <div class="fig-caption">Fig. 3 — Same DragonPay step for everyone.</div>
       </div>
       <div class="step-row">

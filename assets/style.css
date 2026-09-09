@@ -263,3 +263,14 @@ body.modal-open{overflow:hidden}
 /* checkout specific */
 .pay-summary{background:linear-gradient(135deg,#0f2a6b,#2a64c8);color:#fff;border-radius:16px;padding:16px;display:grid;gap:10px}
 .pay-summary .row{grid-template-columns:1fr auto}
+/* DragonPay logo integration */
+.dp-logo{height:22px;width:auto;object-fit:contain;background:#fff;padding:3px 6px;border-radius:8px;border:1px solid #e2e8f0;box-shadow:0 2px 8px rgba(15,32,64,.08);vertical-align:middle}
+.dp-logo--sm{height:18px;padding:2px 5px;border-radius:6px}
+.dp-logo--lg{height:28px;padding:4px 8px;border-radius:10px}
+.dp-logo--dark{border-color:rgba(255,255,255,.18);box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.dp-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);box-shadow:0 2px 10px rgba(15,32,64,.06);font-weight:800;font-size:11px;letter-spacing:.02em;color:#334155}
+.dp-badge img{height:18px}
+.dp-trust{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;font-size:12px;color:#475569}
+.dp-trust img{height:20px}
+.pay-summary .dp-logo{height:20px}
+.dp-hero-logo{height:26px;background:#fff;padding:4px 8px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.18)}

@@ -145,6 +145,10 @@ function verifyStudent(){
     toggleSubmit();
   }).catch(()=>{ resultDiv.innerHTML='<div class="verify-card"><div class="verify-card-header err"><i class="fa-solid fa-circle-xmark"></i> Error</div><div class="verify-card-body"><div class="verify-hint">Error verifying. Please try again.</div></div></div>'; toggleSubmit(); }).finally(()=>{ verifyBtn.disabled=false; verifyBtn.innerHTML='<i class="fa-solid fa-magnifying-glass"></i> Verify'; });
 }
-document.addEventListener('DOMContentLoaded',()=>{ const c=document.getElementById('campid').value; if(c!=='') document.getElementById('verification-section').style.display='block'; });
+document.addEventListener('DOMContentLoaded',()=>{
+  const c=document.getElementById('campid').value; if(c!=='') document.getElementById('verification-section').style.display='block';
+  const s=document.getElementById('studentno');
+  if(s){ s.addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); verifyStudent(); } }); }
+});
 </script>
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

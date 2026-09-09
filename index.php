@@ -7,6 +7,9 @@ require_once __DIR__ . '/includes/header.php';
   <span class="hero-badge" style="background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.28)">University of Perpetual Help System</span>
   <h1>Online Payment</h1>
   <p style="margin:12px auto 0; max-width:640px">Secure and convenient online payments for everyone — students, parents, alumni, and guests. Pay tuition, enrollment fees, and other university charges anytime, anywhere via DragonPay (Online Banking, E-Wallets, and Over the Counter).</p>
+  <div style="margin:16px auto 0;display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.95);border:1px solid rgba(255,255,255,.28);padding:8px 14px;border-radius:999px;backdrop-filter:blur(6px)">
+    <img src="<?= $payments_base ?>assets/dragonpay-xendit-logo-removebg-preview.png" alt="DragonPay" style="height:26px;width:auto;object-fit:contain">
+  </div>
   <div class="hero-actions" style="justify-content:center; margin-top:22px">
     <a href="#pay-options" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i> Start Payment</a>
     <a href="<?= $payments_base ?>instructions" class="btn btn-ghost" style="background:rgba(255,255,255,.14); color:#fff; border:1px solid rgba(255,255,255,.28)"><i class="fa-solid fa-circle-question"></i> How to Pay</a>

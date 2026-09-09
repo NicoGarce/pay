@@ -12,7 +12,7 @@ $payments_base = $GLOBALS['payments_base'] ?? '/';
       </div>
     </div>
   </div>
-  <div class="pay-footer-bottom">© <?= date('Y') ?> UPHSL • Secure payments via DragonPay</div>
+    <div class="pay-footer-bottom" style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap">© <?= date('Y') ?> UPHSL <img src="<?= $payments_base ?>assets/dragonpay-xendit-logo-removebg-preview.png" alt="DragonPay" class="dp-logo dp-logo--sm" style="height:20px"></div>
 </footer>
 </body>
 </html>

@@ -164,6 +164,8 @@ function verifyLocator(){
 document.addEventListener('DOMContentLoaded',()=>{
   const campid=document.getElementById('campid').value;
   if(campid!=='') document.getElementById('locator-section').style.display='block';
+  const l=document.getElementById('locno');
+  if(l){ l.addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); verifyLocator(); } }); }
 });
 </script>
 
